@@ -1,4 +1,4 @@
 usa-ninja
 =========
 
-USA Ninja - powered by GoWest
+GOWest USA Ninja -- powered by MEAN
