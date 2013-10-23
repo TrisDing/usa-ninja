@@ -1,0 +1,25 @@
+<section data-ng-controller="ProductsController">
+	<form class="form-horizontal" data-ng-submit="create()">
+		<div class="control-group">
+			<label class="control-label" for="prodName">Name</label>
+			<div class="controls">
+				<input type="text" data-ng-model="prodName" id="prodName" placeholder="Name">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="prodCatagory">Catagory</label>
+			<div class="controls">
+				<select data-ng-model="prodCatagory" id="prodCatagory">
+					<option value="skincare">Skin Care</option>
+					<option value="cosmetics">Cosmetics</option>
+					<option value="babymom">Baby &amp; Mom</option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

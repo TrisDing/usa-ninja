@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                     ignoredFiles: ['README.md', 'node_modules/**', '.DS_Store'],
                     watchedExtensions: ['js'],
                     watchedFolders: ['app', 'config'],
-                    debug: true,
+                    nodeArgs: ['--debug'],
                     delayTime: 1,
                     env: {
                         PORT: 3000
@@ -60,6 +60,16 @@ module.exports = function(grunt) {
                 reporter: 'spec'
             },
             src: ['test/**/*.js']
+        },
+        'node-inspector': {
+          custom: {
+            options: {
+              'web-port': 1337,
+              'web-host': 'localhost',
+              'debug-port': 5858,
+              'save-live-edit': true
+            }
+          }
         }
     });
 
@@ -69,6 +79,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-node-inspector');
 
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
@@ -78,4 +89,7 @@ module.exports = function(grunt) {
 
     //Test task.
     grunt.registerTask('test', ['mochaTest']);
+
+    //Debugging
+    grunt.registerTask('debug', ['node-inspector']);
 };

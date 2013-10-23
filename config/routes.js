@@ -28,15 +28,6 @@ module.exports = function(app, passport, auth) {
         failureRedirect: '/signin'
     }), users.authCallback);
 
-    //Setting the github oauth routes
-    app.get('/auth/github', passport.authenticate('github', {
-        failureRedirect: '/signin'
-    }), users.signin);
-
-    app.get('/auth/github/callback', passport.authenticate('github', {
-        failureRedirect: '/signin'
-    }), users.authCallback);
-
     //Setting the twitter oauth routes
     app.get('/auth/twitter', passport.authenticate('twitter', {
         failureRedirect: '/signin'
@@ -72,6 +63,14 @@ module.exports = function(app, passport, auth) {
 
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
+
+    // Products Routes
+    var products = require('../app/controllers/products');
+    app.get('/products/all/:catagory', products.show);
+    app.post('/products', auth.requiresLogin, products.create);
+
+    //Finish with setting up the Products param
+    app.param('catagory', products.catagory);
 
     //Home route
     var index = require('../app/controllers/index');

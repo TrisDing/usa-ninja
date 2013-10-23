@@ -1,0 +1,23 @@
+[
+	{
+		"image": "img/featurettes/",
+		"imgpos": "right",
+		"header": "First featurette headling.",
+		"mutedheader": "It'll blow your mind.",
+		"content": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
+	},
+	{
+		"image": "img/featurettes/",
+		"imgpos": "left",
+		"header": "Oh yeah, it's that good.",
+		"mutedheader": "See for yourself.",
+		"content": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."	
+	},
+	{
+		"image": "img/featurettes/",
+		"imgpos": "right",
+		"header": "And lastly, this one.",
+		"mutedheader": "Checkmate.",
+		"content": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."	
+	}
+]

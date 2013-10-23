@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     crypto = require('crypto'),
     _ = require('underscore'),
-    authTypes = ['github', 'twitter', 'facebook', 'google'];
+    authTypes = ['twitter', 'facebook', 'google'];
 
 
 /**
@@ -20,7 +20,6 @@ var UserSchema = new Schema({
     salt: String,
     facebook: {},
     twitter: {},
-    github: {},
     google: {}
 });
 

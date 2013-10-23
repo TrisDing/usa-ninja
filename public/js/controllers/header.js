@@ -1,11 +1,5 @@
-angular.module('mean.system').controller('HeaderController', ['$scope', 'Global', function ($scope, Global) {
+angular.module('mean.system').controller('HeaderController', ['$scope', 'Global', 'Resources', function ($scope, Global, Resources) {
     $scope.global = Global;
 
-    $scope.menu = [{
-        "title": "Articles",
-        "link": "articles"
-    }, {
-        "title": "Create New Article",
-        "link": "articles/create"
-    }];
+    $scope.menu = Resources.query({resourceName: 'menu'});
 }]);
