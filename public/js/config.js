@@ -17,6 +17,9 @@ window.app.config(['$routeProvider',
         when('/products/create', {
             templateUrl: 'views/products/create.html'
         }).
+        when('/products/:group', {
+            templateUrl: 'views/products/list.html'
+        }).
         when('/', {
             templateUrl: 'views/index.html'
         }).

@@ -1,0 +1,73 @@
+[
+	{
+		"name": "skincare",
+		"label": "SKIN CARE",
+		"brands": [
+			"Kiehl's",
+			"Philosophy",
+			"Fresh",
+			"Clinique"
+		],
+		"catagories": [
+			"Cleanse",
+			"Moisturize",
+			"Treat",
+			"Sun Protection",
+			"Self-Tanning",
+			"Other Needs"
+		],
+		"functionals": [
+			"Anti-aging",
+			"Dryness",
+			"Oilness",
+			"Redness",
+			"Sensitive skin"
+		]
+	},
+	{
+		"name": "cosmetics",
+		"label": "COSMETICS",
+		"brands": [
+			"Benefit",
+			"Bobbi Brown",
+			"Estee Lauder",
+			"Lancome",
+			"La Prairie",
+			"M.A.C",
+			"Maybelline",
+			"Urban Decay"
+		],
+		"catagories": [
+			"Face Makeup",
+			"Eye Makeup",
+			"Lips",
+			"Nails"
+		],
+		"functionals": [
+			"Fundation",
+			"Blush",
+			"Brush",
+			"Curling",
+			"Waterproof"
+		]
+	},
+	{
+		"name": "fragrance",
+		"label": "FRAGRANCE",
+		"brands": [ 
+			"Marc Jacobs",
+			"Chloe",
+			"Dior",
+			"Tom Ford"
+		],
+		"catagories": [
+			"Women's",
+			"Men's",
+			"Gifts"
+		],
+		"functionals": [
+			"Rollerball",
+			"Spray"
+		]
+	}
+]

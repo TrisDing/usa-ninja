@@ -1,31 +1,26 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner" data-ng-controller="HeaderController">
-        <ul class="nav">
-            <li><a class="brand" href="/">GoWest - USA Ninja</a></li>
+  <div class="navbar-inner" data-ng-controller="HeaderController">
+    <ul class="nav">
+      <li><a class="brand" href="/">GoWest - USA Ninja</a></li>
+      <li data-ng-repeat="group in groups" ui-route="/{{group.name}}" ng-class="{active: $uiRoute}">
+        <a href="#!/products/{{group.name}}">{{group.label}}</a>
+      </li>
+    </ul>
+    <ul class="nav pull-right" data-ng-hide="global.authenticated">
+      <li><a href="signup">Signup</a></li>
+      <li class="divider-vertical"></li>
+      <li><a href="signin">Signin</a></li>
+    </ul>
+    <ul class="nav pull-right" data-ng-show="global.authenticated">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{global.user.name}} <b class="caret"></b></a>
+        <ul class="dropdown-menu">
             <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-                <a href="#!/{{item.link}}">{{item.title}}</a>
+              <a href="#!/{{item.link}}">{{item.title}}</a>
             </li>
-            <li><a href="products/all/skincare">Skin Care</a></li>
-            <li><a href="products/all/cosmetics">Cosmetics</a></li>
-            <li><a href="products/all/babymom">Baby &amp; Mom</a></li>
+            <li><a href="/signout">Signout</a></li>
         </ul>
-        <ul class="nav pull-right" data-ng-hide="global.authenticated">
-            <li><a href="signup">Signup</a>
-            </li>
-            <li class="divider-vertical"></li>
-            <li><a href="signin">Signin</a>
-            </li>
-        </ul>
-        <ul class="nav pull-right" data-ng-show="global.authenticated">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            {{global.user.name}} <b class="caret"></b>
-          </a>
-                <ul class="dropdown-menu">
-                    <li><a href="/signout">Signout</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+      </li>
+    </ul>
+  </div>
 </div>

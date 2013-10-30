@@ -7,3 +7,7 @@ angular.module('mean.system').factory("Global", [function() {
 
     return _this._data;
 }]);
+
+angular.module('underscore').factory("_", [function() {
+	return window._;
+}]);

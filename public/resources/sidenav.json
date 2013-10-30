@@ -1,0 +1,45 @@
+[
+	{
+		"type": "topFilter",
+		"key": "new",
+		"title": "NEW!"
+	},
+	{
+		"type": "topFilter",
+		"key": "pop",
+		"title": "Most Popular"
+	},
+	{
+		"type": "topFilter",
+		"key": "sal",
+		"title": "On Sale"
+	},
+	{
+		"type": "topFilter",
+		"key": "sto",
+		"title": "In Stock"
+	},
+	{
+		"type": "topFilter",
+		"key": "bko",
+		"title": "Back Order"
+	},
+	{
+		"type": "subFilter",
+		"key": "brd",
+		"title": "Brand",
+		"subitems": []
+	},
+	{
+		"type": "subFilter",
+		"key": "cat",
+		"title": "Catagory",
+		"subitems": []
+	},
+	{
+		"type": "subFilter",
+		"key": "fun",
+		"title": "Functional",
+		"subitems": []
+	}
+]

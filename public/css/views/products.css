@@ -1,0 +1,83 @@
+.thumbnail > h4,
+.thumbnail > p {
+  text-align: center;
+}
+
+.fixed-tile {
+  width: 240px;
+  height: 280px;
+}
+
+.fixed-tile:hover,
+.fixed-tile:focus {
+  cursor: pointer;
+  border-color: #0088cc;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.text-cross {
+  text-decoration: line-through;
+}
+
+.container-fluid > img {
+	margin-bottom: 20px;
+}
+
+.sidebar-divider {
+	margin: 15px 0;
+}
+
+.sidebar-btn {
+	padding: 0;
+}
+
+.sidebar-subitem {
+	margin-left: 30px;
+	margin-bottom: 0;
+}
+
+.close-link:hover,
+.close-link:focus {
+  text-decoration: none;
+}
+
+.modal {
+  width: 840px;
+  min-height: 560px;
+  margin-left: -400px;
+}
+
+.modal-body {
+  max-height: 560px;
+}
+
+.modal-body h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-body hr {
+  border-top: 1px solid rgb(68, 25, 0);
+}
+
+.modal-body .add-btn {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.modal-body .onsale-price {
+  text-decoration: line-through;
+  font-size: 75%;
+  float: right;
+}
+
+
+.modal-header h3 {
+  font-style: italic;
+}
+
+.size-btn {
+  margin-right: 8px;
+}

@@ -8,12 +8,12 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Find products by catagory
+ * Find products by group
  */
-exports.catagory = function(req, res, next, catagory) {
-    Product.find({catagory: catagory}).sort('-created').exec(function(err, products) {
+exports.group = function(req, res, next, group) {
+    Product.find({group: group}).sort('-created').exec(function(err, products) {
         if (err) return next(err);
-        if (!products) return next(new Error('Failed to load products ' + catagory));
+        if (!products) return next(new Error('Failed to load products ' + group));
         req.products = products;
         next();
     });

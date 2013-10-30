@@ -66,11 +66,11 @@ module.exports = function(app, passport, auth) {
 
     // Products Routes
     var products = require('../app/controllers/products');
-    app.get('/products/all/:catagory', products.show);
+    app.get('/products/:group', products.show);
     app.post('/products', auth.requiresLogin, products.create);
 
     //Finish with setting up the Products param
-    app.param('catagory', products.catagory);
+    app.param('group', products.group);
 
     //Home route
     var index = require('../app/controllers/index');

@@ -1,21 +1,105 @@
-<section data-ng-controller="ProductsController">
+<section data-ng-controller="ProductsController" data-ng-init="loadGroups()">
 	<form class="form-horizontal" data-ng-submit="create()">
 		<div class="control-group">
-			<label class="control-label" for="prodName">Name</label>
+			<label class="control-label" for="name">Name</label>
 			<div class="controls">
-				<input type="text" data-ng-model="prodName" id="prodName" placeholder="Name">
+				<input type="text" data-ng-model="name" id="name" placeholder="Name">
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="prodCatagory">Catagory</label>
+			<label class="control-label" for="group">Group</label>
 			<div class="controls">
-				<select data-ng-model="prodCatagory" id="prodCatagory">
-					<option value="skincare">Skin Care</option>
-					<option value="cosmetics">Cosmetics</option>
-					<option value="babymom">Baby &amp; Mom</option>
-				</select>
+				<select data-ng-model="group" data-ng-options="g.name for g in groups" id="group"></select>
 			</div>
 		</div>
+		<div class="control-group">
+			<label class="control-label" for="brand">Brand</label>
+			<div class="controls">
+				<select data-ng-model="brand" data-ng-options="b for b in group.brands" id="brand"></select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="catagory">Catagory</label>
+			<div class="controls">
+				<select data-ng-model="catagory" data-ng-options="c for c in group.catagories" id="catagory"></select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="functional">Functional</label>
+			<div class="controls">
+				<select multiple data-ng-model="functional" data-ng-options="f for f in group.functionals" id="functional"></select>
+			</div>
+		</div>
+		<hr>
+		<div class="control-group">
+			<label class="control-label" for="thumbnail">Thumbnail</label>
+			<div class="controls">
+				<input type="text" data-ng-model="thumbnail" id="thumbnail" placeholder="url">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="images">Images</label>
+			<div class="controls">
+				<input type="text" data-ng-model="images" id="images" placeholder="comma seperated urls">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="sizes">Sized</label>
+			<div class="controls">
+				<input type="text" data-ng-model="sizes" id="sizes" placeholder="comma seperated sizes">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="overview">Overview</label>
+			<div class="controls">
+				<textarea data-ng-model="overview" id="overview" cols="60" rows="5" placeholder="Content"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="detail">Detail</label>
+			<div class="controls">
+				<textarea data-ng-model="detail" id="detail" cols="60" rows="10" placeholder="Content"></textarea>
+			</div>
+		</div>
+		<hr>
+		<div class="control-group">
+			<label class="control-label" for="priceUnit">Unit Price</label>
+			<div class="controls">
+				<input type="text" data-ng-model="price.unit" id="priceUnit" placeholder="0">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="priceOurs">Ours Price</label>
+			<div class="controls">
+				<input type="text" data-ng-model="price.ours" id="priceOurs" placeholder="0">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="pricePromotion">Promotion</label>
+			<div class="controls">
+				<input type="text" data-ng-model="price.promotion" id="pricePromotion" placeholder="0">&nbsp;%
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="priceShipping">Shipping</label>
+			<div class="controls">
+				<input type="text" data-ng-model="price.shipping" id="priceShipping" placeholder="0">
+			</div>
+		</div>
+		<hr>
+		<div class="control-group">
+			<label class="control-label" for="supplySource">Source</label>
+			<div class="controls">
+				<input type="text" data-ng-model="supply.source" id="supplySource" placeholder="source">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="supplyStock">Stock</label>
+			<div class="controls">
+				<input type="text" data-ng-model="supply.stock" id="supplyStock" placeholder="0">
+			</div>
+		</div>
+		<hr>
 		<div class="control-group">
 			<div class="controls">
 				<input type="submit" class="btn">

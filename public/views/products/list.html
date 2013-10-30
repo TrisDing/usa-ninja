@@ -1,0 +1,49 @@
+<section data-ng-controller="ProductsController" data-ng-init="loadProducts()">
+  <div class="container-fluid">
+    <img src="data:image/png;base64," data-src="holder.js/1170x200/auto/#777:#7a7a7a" alt="Generic placeholder image" bs-holder>
+    <div class="row-fluid">
+      <div class="span3">
+        <!--Sidebar content-->
+        <div class="pull-left">
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-search"></i></span>
+            <input type="text" data-ng-model="search.name" placeholder="E.g fresh, cream">
+          </div>
+          <hr class="sidebar-divider">
+          <ul class="nav nav-pills nav-stacked" data-ng-init="lastSelectedItem = null">
+            <li data-ng-repeat="sidenav in sidenavs | filter:{type:'topFilter'}" data-ng-init="itemSelected = false" data-ng-class="{'active': itemSelected}">
+              <a href="" data-ng-click="toggleItemSelection()">
+                <i data-ng-class="{'fa-square-o':!itemSelected, 'fa-check-square-o':itemSelected}" class="fa fa-fw"></i> {{sidenav.title}}
+              </a>
+            </li>
+          </ul>
+          <hr class="sidebar-divider">
+          <ul class="nav nav-pills nav-stacked">
+            <li data-ng-repeat="sidenav in sidenavs | filter:{type:'subFilter'}" data-ng-init="itemExpanded = false">
+              <a href="" data-ng-click="toggleItemExpansion()">
+                <i data-ng-class="{'fa-plus-square':!itemExpanded, 'fa-minus-square':itemExpanded}" class="fa fa-fw"></i> {{sidenav.title}}
+              </a>
+              <ul data-ng-show="itemExpanded" class="nav nav-pills nav-stacked sidebar-subitem" data-ng-init="lastSelectedItem = null">
+                <li data-ng-repeat="subitem in sidenav.subitems" data-ng-init="itemSelected = false" data-ng-class="{'active': itemSelected}">
+                  <a href="" data-ng-click="toggleItemSelection()">{{subitem}}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- well -->
+      </div><!--span3 -->
+      <div class="span9">
+        <ul class="thumbnails">
+      		<li data-ng-click="detail()" data-ng-repeat="product in products | filter:search:strict | topFilter:tfs | brandFilter:bfs | catagoryFilter:cfs | functionalFilter:ffs">
+      			<div class="thumbnail fixed-tile">
+      				<img src="data:image/png;base64," data-src="holder.js/240x180" alt="Generic placeholder image" bs-holder>
+      				<h4>{{product.name}}</h4>
+    				  <p data-ng-show="product.price.ours > 0">{{product.price.ours | currency:'$'}}</p>
+              <p data-ng-class="{'text-cross':product.price.ours > 0}">{{product.price.unit | currency:'$'}}</p>
+      			</div>
+      		</li>
+  	   </ul>
+      </div><!-- span9 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section>

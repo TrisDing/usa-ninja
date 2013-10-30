@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <button type="button" class="close" data-ng-click="close()" aria-hidden="true">&times;</button>
+    <h3>{{product.brand}}</h3>
+</div>
+<div class="modal-body container-fluid">
+    <div class="row-fluid">
+        <div class="span6">
+            <img src="data:image/png;base64," data-src="holder.js/395x360" alt="Generic placeholder image" bs-holder>
+            <ul class="thumbnails">
+              <li data-ng-repeat="img in product.images" class="span4">
+                <a href="#" class="thumbnail">
+                  <img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" bs-holder>
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="span6">
+            <h3>{{product.name}}</h3>
+            <p>{{product.overview}}</p>
+            <div data-ng-show="product.sizes.length > 1">
+                <h6>Sizes</h6>
+                <div data-toggle="buttons-radio">
+                    <button popover="{{size}}" popover-trigger="mouseenter" data-ng-repeat="size in product.sizes" class="btn btn-small size-btn">{{size | sizeFilter:product.sizes}}</button>
+                </div>
+            </div>
+            <hr>
+            <h4><span data-ng-show="onsale">{{product.price.ours | currency:'$'}}</span><span data-ng-class="{'onsale-price':onsale}">{{product.price.unit | currency:'$'}}</span></h4>
+            <hr>
+            <button class="btn btn-primary add-btn" ng-click="addToCart()">Add to Cart</button>
+            <p>{{product.detail}}</p>
+        </div>
+    </div>
+</div>
