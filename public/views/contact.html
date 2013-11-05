@@ -1,0 +1,42 @@
+<section data-ng-controller="AboutController" class="container-fluid well white-well">
+	  <div class="ribbon">
+	    <div class="ribbon-stitches-top"></div>
+	    <strong class="ribbon-content"><h1>Contact Us</h1></strong>
+	    <div class="ribbon-stitches-bottom"></div>
+	  </div>
+	  <hr class="ribbon-divider">
+	<div class="row-fluid">
+		<div class="span6">
+			<img src="data:image/png;base64," data-src="holder.js/500x500" alt="Generic placeholder image" bs-holder>
+		</div>
+		<div class="span6">
+			<form class="form-horizontal wide-form" data-ng-submit="create()">
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" data-ng-model="name" id="name" placeholder="NAME" required>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<input type="email" data-ng-model="email" id="email" placeholder="EMAIL" required>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" data-ng-model="subject" id="subject" placeholder="SUBJECT" required>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<textarea data-ng-model="content" id="content" placeholder=""></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<input type="submit" class="btn btn-primary" value="Send">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

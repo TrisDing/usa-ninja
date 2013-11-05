@@ -19,6 +19,10 @@ var ArticleSchema = new Schema({
         default: '',
         trim: true
     },
+    catagory: {
+        type:String,
+        default: ''
+    },
     content: {
         type: String,
         default: '',

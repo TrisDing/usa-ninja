@@ -1,6 +1,7 @@
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+.index-carousel
 .carousel-control {
   height: 80px;
   margin-top: 0;
@@ -12,9 +13,12 @@
   cursor: pointer;
 }
 
+.index-carousel
 .carousel .item {
   height: 500px;
 }
+
+.index-carousel
 .carousel img {
   position: absolute;
   top: 0;
@@ -23,6 +27,7 @@
   height: 500px;
 }
 
+.index-carousel
 .carousel-caption {
   background-color: transparent;
   /*position: static;*/
@@ -31,6 +36,8 @@
   margin-left: 100px;
   margin-bottom: 150px;
 }
+
+.index-carousel
 .carousel-caption h1,
 .carousel-caption .lead {
   margin: 0;
@@ -39,6 +46,8 @@
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
+
+.index-carousel
 .carousel-caption .btn {
   margin-top: 10px;
 }

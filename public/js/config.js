@@ -20,6 +20,15 @@ window.app.config(['$routeProvider',
         when('/products/:group', {
             templateUrl: 'views/products/list.html'
         }).
+        when('/about', {
+            templateUrl: 'views/about.html'
+        }).
+        when('/contact', {
+            templateUrl: 'views/contact.html'
+        }).
+        when('/cart', {
+            templateUrl: 'views/cart.html'
+        }).
         when('/', {
             templateUrl: 'views/index.html'
         }).

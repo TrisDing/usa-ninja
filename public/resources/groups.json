@@ -1,7 +1,7 @@
 [
 	{
 		"name": "skincare",
-		"label": "SKIN CARE",
+		"label": "Skin Care",
 		"brands": [
 			"Kiehl's",
 			"Philosophy",
@@ -26,7 +26,7 @@
 	},
 	{
 		"name": "cosmetics",
-		"label": "COSMETICS",
+		"label": "Cosmetics",
 		"brands": [
 			"Benefit",
 			"Bobbi Brown",
@@ -53,7 +53,7 @@
 	},
 	{
 		"name": "fragrance",
-		"label": "FRAGRANCE",
+		"label": "Fragrance",
 		"brands": [ 
 			"Marc Jacobs",
 			"Chloe",

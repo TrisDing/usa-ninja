@@ -2,6 +2,20 @@ h1 {
     text-align:center
 }
 
-ul.articles li:not(:last-child) {
-    border-bottom:1px solid #ccc
+ul.articles li {
+	padding: 10px 0;
+}
+
+ul.articles li:nth-child(odd) {
+	border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+}
+
+.maright {
+	margin-right: 30px;
+}
+
+.catagory {
+	text-align: center;
+	width: 120px;
 }

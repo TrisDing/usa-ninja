@@ -1,26 +1,27 @@
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner" data-ng-controller="HeaderController">
-    <ul class="nav">
-      <li><a class="brand" href="/">GoWest - USA Ninja</a></li>
-      <li data-ng-repeat="group in groups" ui-route="/{{group.name}}" ng-class="{active: $uiRoute}">
-        <a href="#!/products/{{group.name}}">{{group.label}}</a>
-      </li>
-    </ul>
-    <ul class="nav pull-right" data-ng-hide="global.authenticated">
-      <li><a href="signup">Signup</a></li>
-      <li class="divider-vertical"></li>
-      <li><a href="signin">Signin</a></li>
-    </ul>
-    <ul class="nav pull-right" data-ng-show="global.authenticated">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{global.user.name}} <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-              <a href="#!/{{item.link}}">{{item.title}}</a>
-            </li>
-            <li><a href="/signout">Signout</a></li>
+<div class="container" data-ng-controller="HeaderController">
+  <div class="row-fluid">
+    <div class="span8">
+      <h1 class="muted pull-left"><a class="prod-title" href="#">USA NINJA</a></h1>
+    </div>
+    <div class="span4 shopping-cart">
+      <button class="btn btn-success pull-right" type="button" data-ng-click="goToCart()"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;{{global.cart.totalQty}} item(s) - {{global.cart.totalPrice | currency:'$'}}</button>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav">
+          <li data-ng-repeat="item in menu" data-ng-show="displayItem(item)" ui-route="/{{item.link}}" data-ng-class="{'dropdown':item.submenus}">
+            <a data-ng-hide="displayDropdown()" href="/{{item.link}}">{{item.title}}</a>
+            <a data-ng-show="displayDropdown()" href="#" class="dropdown-toggle" data-toggle="dropdown">{{item.title | accountDisplayFilter:item.account:global}} <b class="caret"></b></a>
+            <ul data-ng-show="item.submenus" class="dropdown-menu">
+                <li class="no-dropdown" data-ng-repeat="subitem in item.submenus" data-ng-show="displayItem(subitem)" ui-route="/{{subitem.link}}">
+                  <a href="/{{subitem.link}}">{{subitem.title}}</a>
+                </li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </div>

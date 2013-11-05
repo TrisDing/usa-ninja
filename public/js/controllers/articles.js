@@ -4,6 +4,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
     $scope.create = function() {
         var article = new Articles({
             title: this.title,
+            catagory: this.catagory,
             content: this.content
         });
         article.$save(function(response) {
@@ -11,6 +12,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
         });
 
         this.title = "";
+        this.catagory = "";
         this.content = "";
     };
 

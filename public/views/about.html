@@ -1,0 +1,16 @@
+<section data-ng-controller="AboutController" class="container-fluid well white-well">
+	  <div class="ribbon">
+	    <div class="ribbon-stitches-top"></div>
+	    <strong class="ribbon-content"><h1>Our Story</h1></strong>
+	    <div class="ribbon-stitches-bottom"></div>
+	  </div>
+	  <hr class="ribbon-divider">
+	<div data-ng-repeat="featurette in featurettes">
+		<div class="featurette">
+			<img class="featurette-image pull-{{featurette.imgpos}}" src="data:image/png;base64," data-src="holder.js/400x400/auto" alt="Generic placeholder image" bs-holder>
+			<h2 class="featurette-heading">{{featurette.header}}<span class="muted">{{featurette.mutedheader}}</span></h2>
+			<p class="lead">{{featurette.content}}</p>
+		</div>
+		<hr data-ng-hide="$last" class="featurette-divider">
+	</div>
+</section>

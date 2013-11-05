@@ -8,7 +8,5 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
     //Bricklets
     $scope.bricklets = Resources.query({resourceName: 'bricklets'});
 
-    //Featurettes
-    $scope.featurettes = Resources.query({resourceName: 'featurettes'});
-
+    //TODO: remake the footer
 }]);

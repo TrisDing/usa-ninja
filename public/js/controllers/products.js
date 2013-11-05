@@ -14,6 +14,10 @@ angular.module('mean.products').controller('ProductsController', ['$scope', '$ro
                 });
             });
         });
+
+        $scope.groups = Resources.query({resourceName: 'groups'}, function() {
+            $scope.group = _.findWhere($scope.groups, {name:$routeParams.group});
+        });
     };
 
     $scope.toggleItemExpansion = function() {
@@ -116,11 +120,34 @@ angular.module('mean.products').controller('ProductsController', ['$scope', '$ro
             }
         });
 
-        modalInstance.result.then(function (name) {
-            console.log(name);
+        modalInstance.result.then(function (item) {
+            //TODO: use item model
+            //update qty if exist already
+            var found = _.findWhere($scope.global.cart.items, {_product: item._product});
+            if(!! found) {
+                found.qty += item.qty;
+            } else {
+                $scope.global.cart.items.push(item);
+            }
+            //update totalQty and totalPrice
+            //TODO: prototype cart object
+            $scope.global.cart.totalQty = _.reduce($scope.global.cart.items, function(memo, item) {
+                return memo + $scope.toNumber(item.qty);
+            }, 0);
+            $scope.global.cart.totalPrice = _.reduce($scope.global.cart.items, function(memo, item) { 
+                return memo + ($scope.toNumber(item.price) * $scope.toNumber(item.qty)); 
+            }, 0);
+            $scope.global.cart.totalWeight = _.reduce($scope.global.cart.items, function(memo, item) { 
+                return memo + $scope.toNumber(totalWeight);
+            }, 0);
         }, function () {
             console.log('Modal dismissed at: ' + new Date());
         });
+    };
+
+    $scope.toNumber = function (value) {
+        value = value * 1;
+        return isNaN(value) ? 0 : value;
     };
 
 }]);
@@ -128,14 +155,39 @@ angular.module('mean.products').controller('ProductsController', ['$scope', '$ro
 var DetailController = function ($scope, Global, $modalInstance, product) {
     $scope.global = Global;
     $scope.product = product;
-
     $scope.onsale = product.price.ours > 0;
+    $scope.selectedSize = product.sizes.length > 1 ? null : product.sizes[0];
+    $scope.alerts = [];
+
+    $scope.closeAlert = function(index) {
+        $scope.alerts.splice(index, 1);
+    };
 
     $scope.addToCart = function () {
-        $modalInstance.close($scope.product.name);
+        if(!! $scope.selectedSize) {
+            var item = {
+                _user: !!$scope.global.user ? $scope.global.user._id : "Guest",
+                _product: product._id,
+                name: product.name,
+                thumbnail: product.thumbnail,
+                size: $scope.selectedSize.trim(),
+                price: $scope.onsale ? product.price.ours : product.price.unit,
+                qty: 1 // default to 1
+            };
+            $modalInstance.close(item);
+        } else {
+            $scope.alerts.push({msg: "Please select a size!"});
+        }
+        
     };
 
       $scope.close = function () {
         $modalInstance.dismiss('cancel');
     };
+
+    $scope.selectSize = function() {
+        $scope.selectedSize = this.size;
+    };
+
+    //TODO: impelemt add to cart
 };

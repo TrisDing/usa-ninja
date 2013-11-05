@@ -1,0 +1,77 @@
+<section data-ng-controller="CartController" class="container-fluid well white-well">
+	  <div class="ribbon">
+	    <div class="ribbon-stitches-top"></div>
+	    <strong class="ribbon-content"><h1>Shopping Cart</h1></strong>
+	    <div class="ribbon-stitches-bottom"></div>
+	  </div>
+	  <hr class="ribbon-divider">
+	  <div class="cart-header">
+	  	<h3>Thank you for shopping with us</h3>
+	  	<p>Please review your order and when you are ready, click Check out!</p>
+	  </div>
+	<div class="well">
+		<div data-ng-hide="cart.totalQty == 0">
+			<table class="table table-hover shopping-cart">
+			  <thead>
+			    <tr>
+				  <th>IMAGE</th>
+			      <th>ITEM</th>
+			      <th class="thCenter">OPTIONS</th>
+			      <th class="thCenter">QUANTITY</th>
+			      <th class="thCenter">PRICE</th>
+			      <th class="thCenter">REMOVE</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr data-ng-repeat="item in cart.items">
+			      <td><img src="data:image/png;base64," data-src="holder.js/64x64" alt="Generic placeholder image" bs-holder></td>
+			      <td><span>{{item.name}}</span></td>
+			      <td class="tdCenter"><span>{{item.size}}</span></td>
+			      <td class="tdCenter"><input class="span1 text-center" type="text" value="{{item.qty}}" data-ng-model="item.qty" data-ng-change="updateGlobalCart()"></td>
+			      <td class="tdCenter"><span>{{item.price * item.qty | currency:'$'}}</span></td>
+			      <td class="tdCenter"><a href="" data-ng-click="removeItem($index)"><i class="icon-remove"></i></a></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="cart-total pull-right">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td class="alright padright"><b><i class="fa fa-download"></i> :</b></td>
+							<td class="alleft">{{global.cart.totalWeight | number:2}}kg</td>
+						</tr>
+						<tr>
+							<td class="alright padright"><b>Sub-Total:</b></td>
+							<td>{{global.cart.totalPrice | currency:'$'}}</td>
+						</tr>
+						<tr>
+							<td class="alright padright"><b>Sales Tax (7.5%):</b></td>
+							<td class="alleft">{{global.cart.totalPrice * 0.075 | currency:'$'}}</td>
+						</tr>
+						<tr>
+							<td class="alright padright"><b>Estimated Shipping:</b></td>
+							<td class="alleft">{{global.cart.totalWeight * 5 | currency:'$'}}</td>
+						</tr>
+						<tr>
+							<td class="alright padright"><b>Handling Fee (10%):</b></td>
+							<td class="alleft">{{global.cart.totalPrice * 0.1 | currency:'$'}}</td>
+						</tr>
+						<tr>
+							<td class="alright padright"><b>Total:</b></td>
+							<td class="alleft"><span class="label label-success">{{global.cart.totalPrice * 1.175 + global.cart.totalWeight * 5 | currency:'$'}}</span></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button class="btn btn-primary"><i class="fa fa-share"></i> Checkout</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="empty-cart" data-ng-show="cart.totalQty == 0">
+			<p>Your shopping cart is empty</p>
+			<p><i class="fa fa-shopping-cart fa-5x"></i></p>
+		<div>
+	</div>
+</section>

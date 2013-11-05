@@ -81,3 +81,46 @@
 .size-btn {
   margin-right: 8px;
 }
+
+.product-carousel
+.carousel-control {
+  height: 20px;
+  margin-top: -20px;
+  font-size: 60px;
+  background-color: transparent;
+  border: 0;
+  z-index: 10;
+  cursor: pointer;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.product-carousel
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.product-carousel
+.carousel-control.left {
+  left: -12px;
+}
+.product-carousel
+.carousel-control.right {
+  right: -12px;
+}
+
+.product-carousel
+.carousel {
+  margin-bottom: 0;
+  padding: 0 25px 30px 25px;
+}
+
+.shopping-cart button {
+  width: 55%;
+  margin-top: 10px;
+}

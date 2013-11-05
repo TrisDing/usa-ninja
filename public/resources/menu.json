@@ -1,14 +1,70 @@
 [
     {
+        "title": "Home",
+        "link": ""
+    },
+    {
+        "title": "Products",
+        "link": "#",
+        "submenus": [
+            {
+                "title": "Skin Care",
+                "link": "#!/products/skincare"
+            },
+            {
+                "title": "Cosmetics",
+                "link": "#!/products/cosmetics"
+            },
+            {
+                "title": "Fragrance",
+                "link": "#!/products/fragrance"
+            },
+            {
+                "title": "Create New Product",
+                "link": "#!/products/create",
+                "auth": true,
+                "admin": true
+            }
+        ]
+    },
+    {
         "title": "Articles",
-        "link": "articles"
-    }, 
+        "link": "#!/articles",
+        "submenus": [
+            {
+                "title": "Create New Articles",
+                "link": "#!/articles/create",
+                "auth": true,
+                "admin": true
+            }
+        ]
+    },
     {
-        "title": "Create New Article",
-        "link": "articles/create"
-    }, 
+        "title": "About",
+        "link": "#!/about"
+    },
     {
-        "title": "Create New Product",
-        "link": "products/create"
+        "title": "Contact",
+        "link": "#!/contact"
+    },
+    {
+        "title": "Account",
+        "link": "#",
+        "account": true,
+        "submenus": [
+            {
+                "title": "Signup",
+                "link": "signup"
+            },
+            {
+                "title": "Signin",
+                "link": "signin"
+            },
+            {
+                "title": "Signout",
+                "link": "signout",
+                "auth": true
+            }
+        ]
     }
 ]

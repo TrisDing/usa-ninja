@@ -1,18 +1,20 @@
 <section data-ng-controller="IndexController">
 	<!-- Carousel -->
-	<carousel interval="myInterval">
-		<slide ng-repeat="slide in slides" active="slide.active">
-			<img src="data:image/png;base64," data-src="holder.js/900x500/auto/#777:#7a7a7a" alt="Generic placeholder image" bs-holder>
-			<div class="carousel-caption container">
-				<h1>{{slide.title}}</h1>
-				<p class="lead">{{slide.desc}}</p>
-				<a class="btn btn-large btn-primary" href="#">{{slide.button}}</a>
-			</div>
-		</slide>
-	</carousel>
+	<div class="index-carousel">
+		<carousel interval="myInterval">
+			<slide ng-repeat="slide in slides" active="slide.active">
+				<img src="data:image/png;base64," data-src="holder.js/900x500/auto/#777:#7a7a7a" alt="Generic placeholder image" bs-holder>
+				<div class="carousel-caption container">
+					<h1>{{slide.title}}</h1>
+					<p class="lead">{{slide.desc}}</p>
+					<a class="btn btn-large btn-primary" href="#">{{slide.button}}</a>
+				</div>
+			</slide>
+		</carousel>
+	</div>
 	<!-- Bricklets -->
 	<div class="bricklet">
-		<div class="row">
+		<div class="row-fluid">
 			<div class="span4" ng-repeat="bricklet in bricklets">
 			  <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image" bs-holder>
 			  <h2>{{bricklet.header}}</h2>
@@ -21,19 +23,10 @@
 			</div>
 		</div>
 	</div>
-	<!-- Featurettes -->
 	<hr class="featurette-divider">
-	<div data-ng-repeat="featurette in featurettes">
-		<div class="featurette">
-			<img class="featurette-image pull-{{featurette.imgpos}}" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image" bs-holder>
-	    <h2 class="featurette-heading">{{featurette.header}}<span class="muted">{{featurette.mutedheader}}</span></h2>
-	    <p class="lead">{{featurette.content}}</p>
-	  </div>
-	  <hr class="featurette-divider">
-  </div>
 	<!-- Footer -->
 	<footer>
-    <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2013 GoWest, Taobao. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
+		<p class="pull-right"><a href="#">Back to top</a></p>
+	    <p>&copy; 2013 GoWest, Taobao. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	</footer>
 </section>

@@ -1,3 +1,10 @@
+<script id="template/carousel/carousel.html" type="text/ng-template">
+    <div class="carousel">
+        <div class="carousel-inner" ng-transclude></div>
+        <a ng-click="prev()" class="carousel-control left" ng-show="slides().length > 1">&lsaquo;</a>
+        <a ng-click="next()" class="carousel-control right" ng-show="slides().length > 1">&rsaquo;</a>
+    </div>
+</script>
 <div class="modal-header">
     <button type="button" class="close" data-ng-click="close()" aria-hidden="true">&times;</button>
     <h3>{{product.brand}}</h3>
@@ -6,21 +13,33 @@
     <div class="row-fluid">
         <div class="span6">
             <img src="data:image/png;base64," data-src="holder.js/395x360" alt="Generic placeholder image" bs-holder>
-            <ul class="thumbnails">
-              <li data-ng-repeat="img in product.images" class="span4">
-                <a href="#" class="thumbnail">
-                  <img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" bs-holder>
-                </a>
-              </li>
-            </ul>
+            <hr style="border:none;">
+            <div class="product-carousel">
+                <carousel>
+                    <slide active="slide.active">
+                        <div class="row-fluid">
+                          <div class="span4"><a href="#" class="thumbnail"><img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" style="max-width:100%;" bs-holder></a></div>
+                          <div class="span4"><a href="#" class="thumbnail"><img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" style="max-width:100%;" bs-holder></a></div>
+                          <div class="span4"><a href="#" class="thumbnail"><img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" style="max-width:100%;" bs-holder></a></div>
+                        </div><!--/row-fluid-->
+                    </slide>
+                    <slide>
+                        <div class="row-fluid">
+                          <div class="span4"><a href="#" class="thumbnail"><img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" style="max-width:100%;" bs-holder></a></div>
+                          <div class="span4"><a href="#" class="thumbnail"><img src="data:image/png;base64," data-src="holder.js/100x100" alt="Generic placeholder image" style="max-width:100%;" bs-holder></a></div>
+                        </div><!--/row-fluid-->
+                    </slide>
+                </carousel>
+            </div>
         </div>
         <div class="span6">
+            <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
             <h3>{{product.name}}</h3>
             <p>{{product.overview}}</p>
             <div data-ng-show="product.sizes.length > 1">
                 <h6>Sizes</h6>
                 <div data-toggle="buttons-radio">
-                    <button popover="{{size}}" popover-trigger="mouseenter" data-ng-repeat="size in product.sizes" class="btn btn-small size-btn">{{size | sizeFilter:product.sizes}}</button>
+                    <button popover="{{size}}" popover-trigger="mouseenter" data-ng-repeat="size in product.sizes" class="btn btn-small size-btn" data-ng-click="selectSize()">{{size | sizeFilter:product.sizes}}</button>
                 </div>
             </div>
             <hr>

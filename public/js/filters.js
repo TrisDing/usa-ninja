@@ -1,5 +1,12 @@
 /* Filters */
 
+angular.module('mean.system').filter('accountDisplayFilter', function() {
+    return function(item, isAccount, global) {
+        if(!isAccount) return item;
+        return global.authenticated ? global.user.name : item;
+    };
+});
+
 angular.module('mean.products').filter('topFilter', function() {
     return function(products, selection) {
         if(_.isArray(products) && _.isString(selection)) {
