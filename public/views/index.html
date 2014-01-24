@@ -7,7 +7,7 @@
 				<div class="carousel-caption container">
 					<h1>{{slide.title}}</h1>
 					<p class="lead">{{slide.desc}}</p>
-					<a class="btn btn-large btn-primary" href="#">{{slide.button}}</a>
+					<a class="btn btn-large btn-primary" href="{{slide.link}}">{{slide.button}}</a>
 				</div>
 			</slide>
 		</carousel>
@@ -19,7 +19,7 @@
 			  <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image" bs-holder>
 			  <h2>{{bricklet.header}}</h2>
 			  <p>{{bricklet.content}}</p>
-			  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			  <p><a class="btn btn-info" href="{{bricklet.link}}" role="button">立即购买 &raquo;</a></p>
 			</div>
 		</div>
 	</div>
@@ -27,6 +27,6 @@
 	<!-- Footer -->
 	<footer>
 		<p class="pull-right"><a href="#">Back to top</a></p>
-	    <p>&copy; 2013 GoWest, Taobao. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	    <p>&copy; 2013 GoWest, Taobao. &middot; <a href="http://gogowest.taobao.com/">Privacy</a> &middot; <a href="http://gogowest.taobao.com/">Terms</a></p>
 	</footer>
 </section>

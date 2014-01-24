@@ -1,17 +1,20 @@
 [
 	{
+		"link": "#!/products/skincare",
 		"image": "img/bricklets/",
-		"header": "Heading",
-		"content": "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna."
+		"header": "护肤",
+		"content": "Dreamtimes, CLINIQUE 倩碧, L'OREAL 欧莱雅, ESTEE LAUDER 雅诗兰黛, Dior 迪奥, Biotherm 碧欧泉, Shiseido 资生堂, CHANEL 香奈儿, Kiehl's 契尔氏, LAMER 海蓝之谜, Philosophy 自然哲学..."
 	},
 	{
+		"link": "#!/products/cosmetics",
 		"image": "img/bricklets/",
-		"header": "Heading",
-		"content": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh."
+		"header": "彩妆",
+		"content": "LANCOME 兰蔻, ESTEELAUDER 雅诗兰黛, SHISEIDO 资生堂, DIOR 迪奥, CHANEL 香奈尔, CLINIQUE 倩碧, 日本SK-II, BIOTHERM 碧欧泉, HR 赫莲娜, ELIZABETH.AR 伊丽沙白.雅顿..."
 	},
 	{
+		"link": "#!/products/fragrance",
 		"image": "img/bricklets/",
-		"header": "Heading",
-		"content": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
+		"header": "香水",
+		"content": "Burberry 博柏利, Salvatore Ferragamo 菲拉格慕, Calvin Klein 卡文克莱, Gucci 古驰, ANNA SUI 安娜苏, Versace 范思哲, BVLGARI 宝格丽, Dior 迪奥, Davidoff 大卫杜夫, Harajuku 原宿娃娃..."
 	}
 ]

@@ -1,20 +1,23 @@
 [
 	{
+		"link": "http://gogowest.taobao.com/",
 		"image": "img/slides/",
-		"title": "Example headline.",
-		"button": "Sign up today",
-		"desc": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+		"title": "GOWEST-西游记",
+		"button": "去逛逛",
+		"desc": "淘宝小店，美国专业化妆品代购，契尔氏，兰蔻，倩碧等一线品牌一网打尽！我们相信，选择可以很简单：与你一样热爱美丽的店主MM，能为特别的你推荐最合适的美妆产品。"
 	},
 	{
+		"link": "http://www.taobao.com/market/gmall/index-dpl.php",
 		"image": "img/slides/",
-		"title": "Another example headline.",
-		"button": "Learn more",
-		"desc": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+		"title": "全球购加盟商家",
+		"button": "了解更多",
+		"desc": "淘宝全球购是淘宝网全球购的缩写又名全球购物网，是服务于广大喜欢在淘宝代购全球商品朋友们的资质导购平台，拥有韩国,日本,香港,美国,台湾,英国,加拿大等多个代购频道，淘宝全球购的目标就是“足不出户，代购全球”。"
 	},
 	{
+		"link": "/signup",
 		"image": "img/slides/",
-		"title": "One more for good measure.",
-		"button": "Browse gallery",
-		"desc": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+		"title": "海淘忍者",
+		"button": "马上注册",
+		"desc": "怨念！！天天海淘，但是只能看，不能买！面多国外玲琅满目的折扣信息，那是各种羡慕嫉妒恨！！你是否和我一样呢？不过我现在不再愁了！因为有了海淘忍者，集中打包寄送，省时省心省钱，网购无国界！"
 	}
 ]

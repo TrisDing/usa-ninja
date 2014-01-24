@@ -2,22 +2,22 @@
 	{
 		"image": "img/featurettes/",
 		"imgpos": "right",
-		"header": "First featurette headling.",
-		"mutedheader": "It'll blow your mind.",
-		"content": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
+		"header": "真诚开店",
+		"mutedheader": "真诚购物",
+		"content": "您从万千店铺里选择了我们，是我们的缘分。 网购护肤彩妆用品，哪怕您有一丝一毫一丁点儿的疑虑，请不要下单。 避免您难以名状的不安全感，避免我们无休止无意义的解释。"
 	},
 	{
 		"image": "img/featurettes/",
 		"imgpos": "left",
-		"header": "Oh yeah, it's that good.",
-		"mutedheader": "See for yourself.",
-		"content": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."	
+		"header": "店主MM",
+		"mutedheader": "亲自采购",
+		"content": "美国境内官网一线采购。 店主为在职员工，兴趣使然开此小店，每一样产品都会亲自挑选，保证新鲜；每一个货号都记录备份，不容差池。我们会在您拍下货品的隔天发货。 由于中美路途遥远，恕本店无法接受任何退换要求。"	
 	},
 	{
 		"image": "img/featurettes/",
 		"imgpos": "right",
-		"header": "And lastly, this one.",
-		"mutedheader": "Checkmate.",
-		"content": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."	
+		"header": "客户体验",
+		"mutedheader": "有口皆碑",
+		"content": "我们把好用的、热销的，和美国的价格优势放在店里与您分享。 如果您喜欢，欢迎光临，您的关注是我们缘分的开始..."	
 	}
 ]
